@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "pizza backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "pizza-shop": "npm start --prefix pizza-shop",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run pizza-shop\"",
+    "data:import": "node seeder.js"
+  },
+  "author": "Harshit Goel",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "concurrently": "^8.2.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
+    "stripe": "^13.4.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}
